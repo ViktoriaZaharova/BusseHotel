@@ -1,0 +1,1170 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+//*::-webkit-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*::-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-ms-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//body input:focus:required:invalid,
+//body textarea:focus:required:invalid
+//  color: #666
+//
+//body input:required:valid,
+//body textarea:required:valid
+//  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: #000000
+
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  box-sizing: border-box
+  font-family: $default-font
+  height: 64px
+  background: rgba(255, 255, 255, 0.5)
+  border: 1px solid #CE262B
+    radius: 10px
+  padding: 0 11px
+  width: 100%
+  font-size: 20px
+
+textarea
+  height: 199px
+  width: 100%
+  border: 1px solid #CE262B
+    radius: 20px
+  box-shadow: 0px 0px 20px rgba(253, 39, 39, 0.25)
+  background: #ffffff
+  padding: 25px 13px
+  color: $accent
+  font-size: 20px
+  letter-spacing: 0.05em
+  &::placeholder
+    color: rgba(206, 38, 43, 0.6)
+
+.form-group
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  label
+    max-width: 49%
+
+label
+  display: block
+  position: relative
+  width: 100%
+
+.input-icon
+  width: 38px
+  height: 38px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  right: 10px
+  top: 50%
+  transform: translate(0,-50%)
+
+.input-text
+  font-size: 28px
+  font-weight: bold
+  letter-spacing: 0.05em
+  color: $accent
+
+button
+  outline: none
+  box-shadow: none
+  padding: 0
+  border: none
+    radius: 0
+  margin: 0
+  cursor: pointer
+  transition: .3s ease
+  font-family: $default-font
+  background: #fff
+
+h1, .main-slider-title
+  font-weight: 900
+  font-size: 92px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  text-align: center
+  -webkit-text-fill-color: white
+  -webkit-text-stroke-width: 1px
+  -webkit-text-stroke-color: $accent
+  width: 100%
+
+h2, .subtitle
+  font-size: 72px
+  font-weight: bold
+  letter-spacing: 0.05em
+  -webkit-text-fill-color: white
+  -webkit-text-stroke-width: 1px
+  -webkit-text-stroke-color: $accent
+  width: 100%
+  text-align: center
+
+h3
+  font-size: 28px
+  font-weight: bold
+  letter-spacing: 0.05em
+
+h4
+  letter-spacing: 0.05em
+  font-size: 26px
+  font-weight: bold
+
+.w-100
+  width: 100%
+
+.logo
+  color: #000
+  font-size: 18px
+  font-weight: bold
+  letter-spacing: 0.15em
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+.logo-subtitle
+  font-size: 15px
+  display: block
+  letter-spacing: 0.11em
+  text-transform: lowercase
+  margin: 2px 0 0
+
+.logo-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  border: 1px solid #CE262B
+    radius: 50%
+  width: 100px
+  height: 100px
+  min-width: 100px
+  margin: 0 17px 0 0
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.menu
+  font-size: 14px
+  font-weight: bold
+  letter-spacing: 0.06em
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 auto
+  li
+    margin: 0 65px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #000
+      &:hover
+        color: $accent
+    .active
+      color: $accent
+      border-bottom: 3px solid #CE262B
+  .dropdown-menu
+    padding: 17px 14px
+    background: rgba(255, 255, 255, 0.7)
+    border: 1px solid #CE262B
+      radius: 5px
+    top: calc(100% + 13px)
+    a
+      font-weight: normal
+      margin: 0 0 7px
+      text-transform: none
+      &:last-child
+        margin: 0
+      &:hover
+        font-weight: bold
+    .active
+      font-weight: bold
+
+p, .box-text
+  line-height: 129.9%
+  font-size: 22px
+  letter-spacing: 0.05em
+
+.card
+  letter-spacing: 0.05em
+
+.card-title
+  font-size: 36px
+  font-weight: bold
+  color: $accent
+  margin: 0 auto 90px
+  width: 100%
+  text-align: center
+
+
+.card-subtext
+  font-size: 28px
+
+.btn-card
+  font-size: 32px
+  color: #CE262B
+  font-weight: bold
+
+.color-accent
+  color: $accent
+
+.phone
+  letter-spacing: 0.06em
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+  margin: 0 0 5px
+  color: #000000
+  &:last-child
+    margin: 0
+  &:hover
+    color: $accent
+
+.container
+  max-width: 1230px
+  width: 100%
+  padding: 0 15px
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  margin: 0 auto
+
+.btn
+  display: flex
+  align-items: center
+  padding: 0 20px 0 50px
+  height: 90px
+  max-width: 355px
+  width: 100%
+  font-family: $default-font
+  font-size: 28px
+  font-weight: 900
+  letter-spacing: 0.05em
+
+.btn-accent
+  border-radius: 50px
+  background: $accent
+  color: #fff
+  &:hover
+    box-shadow: inset 0 0 40px #FD2727
+    background: #fff
+    color: $accent
+  &:focus
+    box-shadow: inset 0 0 20px #FD2727
+    background: #fff
+    color: $accent
+
+.btn-border
+  box-shadow: 0px 0px 20px rgba(253, 39, 39, 0.25)
+  border: 1px solid #CE262B
+    radius: 40px
+  padding: 0 20px 0 74px
+  font-size: 32px
+  font-weight: bold
+  color: $accent
+  &:hover
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #CE262B
+    border: 1px solid #CE262B
+    box-shadow: 0px 0px 20px rgba(253, 39, 39, 0.25)
+    color: #fff
+  &:focus
+    background: #CE262B
+    border: 1px solid #CE262B
+    box-shadow: 0px 0px 20px rgba(253, 39, 39, 0.25)
+    color: #fff
+
+.list-social
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  li
+    margin: 0 40px 0 0
+    &:last-child
+      margin: 0
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 70px
+      height: 70px
+      border: 3px solid #CE262B
+        radius: 50%
+      padding: 10px
+      img
+        transition: .3s ease
+      &:hover
+        box-shadow: 0px 4px 5px rgba(206, 38, 43, 0.47)
+        img
+          filter: drop-shadow(0px 4px 5px rgba(206, 38, 43, 0.47))
+
+.btn-burger
+  cursor: pointer
+  display: none
+  flex-direction: column
+  align-items: flex-start
+  justify-content: space-between
+  width: 22px
+  height: 10px
+  margin: 0 0 0 26px
+  span
+    display: block
+    width: 100%
+    background: #000
+    height: 2px
+
+.dropdown
+  position: relative
+
+.dropdown-toggle
+  position: relative
+  padding: 0 10px 0 0
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0,-50%)
+    width: 6px
+    height: 6px
+    background: url("../img/arrow-bottom.svg") no-repeat center
+      size: 100%
+
+.dropdown-menu
+  z-index: 2
+  position: absolute
+  top: 100%
+  left: 50%
+  transform: translate(-50%,0)
+  display: none
+
+.lang-item
+  display: flex
+  align-items: center
+  letter-spacing: 0.05em
+  font-size: 15px
+  font-weight: bold
+  color: #000
+  text-transform: uppercase
+
+.lang-icon
+  width: 33px
+  height: 22px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 2px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.lang-text
+  margin: 0 0 0 11px
+
+.language-box
+  margin: 0 0 0 35px
+  .dropdown-menu
+    left: auto
+    right: 0
+    transform: none
+    padding: 10px 0 0
+    .lang-text
+      display: none
+  .dropdown-item
+    margin: 0 0 9px
+    &:last-child
+      margin: 0
+    .lang-icon
+      border: 0.5px solid #CE262B
+
+.slick-dots
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  bottom: 0
+  margin: 35px auto 0
+  li
+    cursor: pointer
+    margin: 0 22px 0 0
+    background: #A2A1A1
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    &:last-child
+      margin: 0
+    button
+      display: none
+  .slick-active
+    background: #fff
+
+.slick-slide
+  outline: none
+
+//header
+header
+  padding: 17px 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  .container
+    align-items: center
+
+
+
+//main
+.form
+  width: 100%
+
+.form-booking
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+  margin: 104px 0 0
+  .btn
+    max-width: 354px
+    margin: 0 0 0 38px
+
+.form-wrapper
+  background: rgba(255, 255, 255, 0.7)
+  border: 1px solid #CE262B
+    radius: 20px
+  padding: 34px 20px 35px 38px
+  max-width: 630px
+  width: 100%
+  label
+    max-width: 450px
+
+
+.form-row
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  margin: 0 0 29px
+  &:last-child
+    margin: 0
+
+main
+  position: relative
+  background: url("../img/bg1.jpeg") no-repeat center bottom
+    size: cover
+  padding: 230px 0 160px
+  .slick-dots
+    margin: 90px auto 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    background: url("../img/decor1.png") no-repeat center
+      size: cover
+    height: 189px
+    width: 100%
+
+.form-booking-mobile
+  display: none
+
+
+//about
+.about
+
+  padding: 36px 0 106px
+  .container
+    position: relative
+    z-index: 1
+    &:after, &:before
+      content: ''
+      position: absolute
+      z-index: -1
+      opacity: .25
+      top: -30px
+    &:before
+      left: 0
+      background: url('../img/decor2.png') no-repeat center
+        size: 100%
+      width: 329px
+      height: 329px
+    &:after
+      right: 0
+      opacity: .2
+      background: url("../img/decor3.jpg") no-repeat center
+        size: 100%
+      height: 618px
+      width: 463px
+  h4
+    margin: 0 auto 43px
+  .box-text
+    p
+      &:last-child
+        margin: 30px 0 0
+
+.box-text-mobile
+  display: none
+
+//products
+.products
+  padding: 30px 0 65px
+  .container
+    position: relative
+    z-index: 1
+
+.products-section1
+  .container
+    &:before
+      content: ''
+      position: absolute
+      bottom: -183px
+      left: -142px
+      opacity: .2
+      transform: rotate(-21.44deg)
+      background: url("../img/decor4.png") no-repeat center
+        size: 100%
+      width: 497px
+      height: 371px
+
+.products-slide
+  border: 1px solid #CE262B
+    radius: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+
+  width: 100%
+  height: 348px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.products-slider
+  .slick-slide
+    padding: 0 10px
+  .slick-dots
+    li
+      margin: 0 8px 0 0
+      width: 10px
+      height: 10px
+      background: rgba(206, 38, 43, 0.37)
+    .slick-active
+      background: $accent
+
+.products-title
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 0 30px
+  h3
+    color: $accent
+  .btn
+    font-size: 18px
+    height: 40px
+    max-width: 183px
+    padding: 0
+    text-align: center
+    justify-content: center
+
+.products-section3
+  .container
+    &:before
+      content: ''
+      position: absolute
+      bottom: -112px
+      right: -98px
+      opacity: .2
+      background: url("../img/decor5.png") no-repeat center
+        size: 100%
+      width: 379px
+      height: 185px
+
+.products-section4
+  .container
+    &:before
+      content: ''
+      position: absolute
+      bottom: -160px
+      left: 50%
+      transform: translate(-50%,0)
+      opacity: .2
+      background: url("../img/decor6.png") no-repeat center
+        size: 100%
+      width: 284px
+      height: 275px
+
+.products-section5
+  .container
+    &:before
+      content: ''
+      position: absolute
+      bottom: -90px
+      left: 0
+      opacity: .2
+      background: url("../img/decor7.png") no-repeat center
+        size: 100%
+      width: 242px
+      height: 125px
+
+
+//interesting
+.interesting
+  h4
+    margin: 0 auto 20px
+
+.interesting-wrapper
+  position: relative
+  width: 100%
+  z-index: 1
+  padding: 22px 0 35px
+  font-size: 22px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .2
+    background: url("../img/map-bg.png") no-repeat center
+      size: cover
+    width: 100%
+    height: 100%
+    z-index: -1
+  .container
+    align-items: flex-start
+
+.interesting-content
+  width: calc(100% - 164px)
+
+.list
+  margin: 43px 0 0
+  li
+    margin: 0 0 20px
+    display: flex
+    align-items: center
+    &:last-child
+      margin: 0
+    .icon
+      width: 30px
+      height: 30px
+      min-width: 30px
+      margin: 0 11px 0 0
+
+
+
+#ml_aa0ed972_c
+  display: none
+
+//contacts
+.contacts
+  h4
+    margin: 0 auto 43px
+    text-align: center
+
+.contacts-text
+  padding: 130px 0 38px
+  .container
+    position: relative
+    z-index: 1
+    &:before, &:after
+      content: ''
+      opacity: .2
+      position: absolute
+      z-index: -1
+    &:before
+      top: -140px
+      left: -252px
+      width: 473px
+      height: 415px
+      transform: rotate(-22.73deg)
+      background: url("../img/decor8.png") no-repeat center
+        size: 100%
+    &:after
+      top: -155px
+      right: -153px
+      width: 394px
+      height: 379px
+      background: url("../img/decor9.png") no-repeat center
+        size: 100%
+
+.callback-box
+  position: relative
+  z-index: 1
+  background: url("../img/bg2.png") no-repeat center
+    size: cover
+  padding: 95px 0
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 189px
+  &:before
+    background: url("../img/decor11.png") no-repeat center
+      size: cover
+    top: 0
+  &:after
+    background: url("../img/decor12.png") no-repeat center
+      size: cover
+    bottom: 0
+
+.form-callback
+  max-width: 789px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  z-index: 1
+  input
+    background: #fff
+    height: 80px
+    padding: 0 13px
+    color: $accent
+    border-radius: 20px
+    &::placeholder
+      color: rgba(206, 38, 43, 0.6)
+  label
+    margin: 0 0 54px
+  .btn
+    margin: 0 auto
+    height: 63px
+    max-width: 400px
+    padding: 0
+    text-align: center
+    justify-content: center
+    font-size: 24px
+
+.contacts-info
+  padding: 20px 0 70px
+  .container
+    position: relative
+    z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      width: 415px
+      height: 310px
+      background: url("../img/decor10.png") no-repeat center
+        size: contain
+      opacity: .2
+      top: -20px
+      left: 160px
+      transform: rotate(-18.58deg)
+      z-index: -1
+
+.map
+  border: 1px solid #CE262B
+    radius: 20px
+  width: 590px
+  height: 368px
+  margin: 0 0 0 auto
+  iframe
+    width: 100%
+    height: 100%
+    outline: none
+    border-radius: 20px
+
+.list-contacts
+  margin: 0 0 73px
+  li
+    margin: 0 0 17px
+    &:last-child
+      margin: 0
+  strong
+    font-weight: bold
+
+//footer
+footer
+  background: #040D23
+  color: #fff
+  padding: 103px 0 105px
+  .map
+    display: none
+  .container
+    justify-content: space-between
+    align-items: flex-start
+  .logo-icon
+    width: 45px
+    height: 45px
+    min-width: 45px
+    margin: 0 17px 0 0
+  .logo
+    color: #FFFFFF
+  .menu
+    margin: 10px auto 0
+    li
+      margin: 0 90px 0 0
+      a
+        color: #FFFFFF
+  .phone
+    color: #fff
+
+.footer-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+
+.mobile-menu
+  display: none
+  position: fixed
+  z-index: 3
+  left: 0
+  top: 0
+  width: 100%
+  background: rgba(206, 38, 43, 0.76)
+  backdrop-filter: blur(30px)
+  height: 100%
+  overflow-y: auto
+  padding: 25px 11px
+  .menu
+    display: flex
+    justify-content: space-between
+    width: 100%
+    font-size: 15px
+    li
+      margin: 0
+    a
+      color: #fff
+      &:hover
+        color: #000
+    .dropdown-item
+      text-transform: uppercase
+      margin: 0 0 5px
+  .dropdown-menu
+    background: transparent
+    padding: 0
+    border: none
+    box-shadow: none
+    left: 0
+    transform: none
+    font-size: 12px
+  .dropdown-toggle
+    &:after
+      background: url("../img/arrow-bottom2.svg") no-repeat center
+        size: 100%
+
+.btn-close
+  position: absolute
+  top: 25px
+  right: 11px
+  width: 27px
+  height: 23px
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    background: #fff
+    width: 2px
+    height: 100%
+    top: 0
+    left: 13px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg)
+
+.mobile-menu-wrapper
+  max-width: 433px
+  width: 100%
+  margin: 0 auto
+
+.form-search
+  max-width: 407px
+  width: 100%
+  margin: 0 auto 30px
+  input
+    height: 35px
+    background: #fff
+    border: none
+      radius: 120px
+    font-size: 13px
+    font-weight: bold
+    padding: 0 20px
+    &::placeholder
+      color: rgba(206, 38, 43, 0.6)
+
+.thanks-box
+  border: 1px solid #CE262B
+    radius: 20px
+  text-align: center
+  max-width: 802px
+  width: 100%
+  margin: 0 auto
+  padding: 222px 0
+  font-size: 32px
+  letter-spacing: 0.05em
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../img/thanks-bg.jpeg") no-repeat center
+    size: cover
+  p
+    font-size: 32px
+
+.error-section
+  padding: 80px 0 40px
+  position: relative
+  background: url("../img/404.jpeg") no-repeat center
+    size: cover
+  z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background: rgba(255, 255, 255, 0.65)
+  h1
+    -webkit-text-stroke-width: inherit
+    -webkit-text-fill-color: inherit
+    color: #040D23
+    position: relative
+    font-weight: 900
+    font-size: 288px
+    line-height: 129.9%
+    max-width: 678px
+    width: 100%
+    margin: 0 auto 93px
+    text-transform: none
+    letter-spacing: 0.05em
+    text-align: right
+    span
+      position: absolute
+      font-size: 36px
+      left: -105px
+      bottom: 65px
+      color: $accent
+      line-height: 129.9%
+      font-weight: bold
+  .container
+    max-width: 1660px
+
+  .box-text
+    text-align: center
+    font-size: 36px
+    p
+      font-size: 36px
+  h3
+    margin: 65px auto 0
+    color: $accent
+    font-size: 36px
+    font-weight: bold
+    text-align: center
+
+.row
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 -10px
+
+.col-3
+  width: 33.3%
+  padding: 0 10px
+
+//product-page
+.product-page
+  padding: 80px 0
+  font-size: 26px
+  line-height: 129.9%
+  p
+    font-size: 26px
+  .card-title
+    line-height: normal
+
+.btn-card
+  margin: 0 auto
+  text-align: center
+  padding: 0
+  height: 80px
+  max-width: 450px
+  font-size: 32px
+  justify-content: center
+  &:hover
+    box-shadow: 0px 0px 50px rgba(206, 38, 43, 0.76)
+    background: #CE262B
+
+.schedule-product
+  margin: 100px auto 115px
+  width: 100%
+  text-align: center
+
+
+.product-gallery-item
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  margin: 0 0 47px
+  border: 2px solid #CE262B
+    radius: 20px
+  height: 228px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.product-gallery-item.h-100
+  height: 503px
+
+.product-page-info
+  margin: 40px 0 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+  ul
+    li
+      margin: 0 0 17px
+      &:last-child
+        margin: 0
+
+.product-page-info__img
+  opacity: .2
+  transform: rotate(11.06deg) translate(0,-50%)
+  position: absolute
+  right: 0
+  top: 30%
+
+
+.additionally
+  h4
+    width: 100%
+    color: $accent
+    margin: 0 0 44px
+
+.list-option
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  li
+    width: 50%
+    display: flex
+    align-items: center
+    margin: 0 0 15px
+    .icon
+      width: 60px
+      height: 60px
+      min-width: 60px
+      border: 2px solid #CE262B
+        radius: 50px
+      padding: 10px
+      margin: 0 22px 0 0
+
+.product-page2
+  .product-page-info__img
+    opacity: .3
+    transform: rotate(-39.24deg)
+    max-width: 514px
+
+.product-page3
+  .product-page-info__img
+    top: 32px
+    transform: rotate(14.18deg)
+
+.product-page4
+  .product-page-info__img
+    top: -40px
+    transform: none
+
+.product-page5
+  .product-page-info__img
+    transform: none
+    top: -40px
+
+@import "media"
+// Всегда в конце
