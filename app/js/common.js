@@ -23,7 +23,10 @@ $(document).ready(function () {
 $('.main-slider').slick({
     slidesToShow: 1,
     arrows: false,
-    dots: true
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
 });
 
 $('.btn-burger').on('click', function () {

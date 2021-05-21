@@ -58,7 +58,6 @@ body {
   font-size: 16px;
   min-width: 320px;
   position: relative;
-  line-height: normal;
   font-family: "Arial", sans-serif;
   font-weight: normal;
   background: #fff;
@@ -229,12 +228,14 @@ h4 {
       -ms-flex-align: center;
           align-items: center; }
 
+.logo-title {
+  font-weight: 900; }
+
 .logo-subtitle {
   font-size: 15px;
   display: block;
   letter-spacing: 0.11em;
-  text-transform: lowercase;
-  margin: 2px 0 0; }
+  text-transform: lowercase; }
 
 .logo-icon {
   display: -webkit-box;
@@ -278,26 +279,31 @@ h4 {
     .menu li:last-child {
       margin: 0; }
     .menu li a {
-      color: #000; }
+      color: #000;
+      border-bottom: 3px solid transparent; }
       .menu li a:hover {
-        color: #CE262B; }
+        color: #CE262B;
+        border-bottom: 3px solid #CE262B; }
     .menu li .active {
       color: #CE262B;
       border-bottom: 3px solid #CE262B; }
   .menu .dropdown-menu {
-    padding: 17px 14px;
+    min-width: 121px;
+    padding: 17px 13px;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #CE262B;
       border-radius: 5px;
-    top: calc(100% + 13px); }
+    top: calc(100% + 10px); }
     .menu .dropdown-menu a {
       font-weight: normal;
       margin: 0 0 7px;
-      text-transform: none; }
+      text-transform: none;
+      border: none; }
       .menu .dropdown-menu a:last-child {
         margin: 0; }
       .menu .dropdown-menu a:hover {
-        font-weight: bold; }
+        font-weight: bold;
+        border: none; }
     .menu .dropdown-menu .active {
       font-weight: bold; }
 
@@ -319,11 +325,6 @@ p, .box-text {
 
 .card-subtext {
   font-size: 28px; }
-
-.btn-card {
-  font-size: 32px;
-  color: #CE262B;
-  font-weight: bold; }
 
 .color-accent {
   color: #CE262B; }
@@ -391,7 +392,8 @@ p, .box-text {
   padding: 0 20px 0 74px;
   font-size: 32px;
   font-weight: bold;
-  color: #CE262B; }
+  color: #CE262B;
+  background: #fff; }
   .btn-border:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.51)), to(rgba(255, 255, 255, 0))), #CE262B;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #CE262B;
@@ -471,7 +473,7 @@ p, .box-text {
 
 .dropdown-toggle {
   position: relative;
-  padding: 0 10px 0 0; }
+  padding: 0 14px 0 0; }
   .dropdown-toggle:after {
     content: '';
     position: absolute;
@@ -479,9 +481,14 @@ p, .box-text {
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     background: url("../img/arrow-bottom.svg") no-repeat center;
+      background-size: 100%;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+  .dropdown-toggle:hover:after {
+    background: url("../img/arrow-bottom-red.svg") no-repeat center;
       background-size: 100%; }
 
 .dropdown-menu {
@@ -604,7 +611,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 104px 0 0; }
+  margin: 90px 0 0; }
   .form-booking .btn {
     max-width: 354px;
     margin: 0 0 0 38px; }
@@ -635,13 +642,25 @@ header {
     margin: 0; }
 
 main {
-  position: relative;
-  background: url("../img/bg1.jpeg") no-repeat center bottom;
-    background-size: cover;
-  padding: 230px 0 160px; }
+  position: relative; }
   main .slick-dots {
-    margin: 90px auto 0; }
-  main:before {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 113px;
+    z-index: 2; }
+
+.form-booking-mobile {
+  display: none; }
+
+.main-slider-box {
+  padding: 230px 0 190px;
+  position: relative;
+  z-index: 1; }
+
+.main-slider {
+  position: relative;
+  z-index: 1; }
+  .main-slider:before {
     content: '';
     position: absolute;
     left: 0;
@@ -649,10 +668,18 @@ main {
     background: url("../img/decor1.png") no-repeat center;
       background-size: cover;
     height: 189px;
-    width: 100%; }
+    width: 100%;
+    z-index: 1; }
 
-.form-booking-mobile {
-  display: none; }
+.main-slider-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1; }
 
 .about {
   padding: 36px 0 106px; }
@@ -724,7 +751,12 @@ main {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    -webkit-transition: 1s ease;
+    transition: 1s ease; }
+  .products-slide:hover img {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); }
 
 .products-slider .slick-slide {
   padding: 0 10px; }
@@ -864,9 +896,9 @@ main {
       z-index: -1; }
     .contacts-text .container:before {
       top: -140px;
-      left: -252px;
-      width: 473px;
-      height: 415px;
+      left: -142px;
+      width: 403px;
+      height: 375px;
       -webkit-transform: rotate(-22.73deg);
               transform: rotate(-22.73deg);
       background: url("../img/decor8.png") no-repeat center;
@@ -1200,19 +1232,23 @@ footer {
     line-height: normal; }
 
 .btn-card {
+  font-size: 32px;
+  color: #CE262B;
+  font-weight: bold;
   margin: 0 auto;
   text-align: center;
   padding: 0;
   height: 80px;
   max-width: 450px;
-  font-size: 32px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
   .btn-card:hover {
     -webkit-box-shadow: 0px 0px 50px rgba(206, 38, 43, 0.76);
             box-shadow: 0px 0px 50px rgba(206, 38, 43, 0.76);
-    background: #CE262B; }
+    background: #CE262B;
+    max-width: 460px;
+    height: 85px; }
 
 .schedule-product {
   margin: 100px auto 115px;
@@ -1238,7 +1274,15 @@ footer {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    -webkit-transition: 1s ease;
+    transition: 1s ease; }
+  .product-gallery-item:hover img {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); }
+
+.product-gallery-item.h-auto {
+  height: 274px; }
 
 .product-gallery-item.h-100 {
   height: 503px; }
@@ -1268,7 +1312,7 @@ footer {
           transform: rotate(11.06deg) translate(0, -50%);
   position: absolute;
   right: 0;
-  top: 30%; }
+  top: 60%; }
 
 .additionally h4 {
   width: 100%;
@@ -1333,7 +1377,7 @@ footer {
   footer {
     padding: 98px 0 87px; }
     footer .menu li {
-      margin: 0 75px 0 0; }
+      margin: 0 65px 0 0; }
   .menu {
     font-size: 12px; }
   .list-social li {
@@ -1461,13 +1505,11 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 22px; }
-  main .slick-dots {
-    margin: 30px auto 0; }
   .slick-dots li {
     width: 15px;
     height: 15px;
     margin: 0 15px 0 0; }
-  main:before {
+  .main-slider:before {
     height: 161px; }
   .form-booking {
     margin: 40px auto 0; }
@@ -1493,7 +1535,7 @@ footer {
   .menu {
     font-size: 12px; }
     .menu li {
-      margin: 0 50px 0 0; }
+      margin: 0 40px 0 0; }
   .logo-icon {
     width: 70px;
     height: 70px;
@@ -1561,10 +1603,12 @@ footer {
   .about .container:before {
     width: 265px;
     height: 265px; }
-  main:before {
+  .main-slider:before {
     height: 107px; }
-  main {
-    padding: 98px 0 120px; }
+  main .slick-dots {
+    bottom: 80px; }
+  .main-slider-box {
+    padding: 98px 0 114px; }
   .btn {
     height: 50px;
     font-size: 18px; }
@@ -1575,7 +1619,7 @@ footer {
   .menu {
     font-size: 11px; }
     .menu li {
-      margin: 0 60px 0 0; }
+      margin: 0 30px 0 0; }
   .logo {
     font-size: 16px; }
   .logo-subtitle {
@@ -1615,7 +1659,7 @@ footer {
   footer .menu li {
     margin: 0 30px 0 0; }
   .menu li {
-    margin: 0 20px 0 0; } }
+    margin: 0 10px 0 0; } }
 
 @media only screen and (max-width: 768px) {
   footer {
@@ -1760,10 +1804,12 @@ footer {
       height: 199px; }
     .about h4 {
       margin: 0 auto 32px; }
-  main {
+  .main-slider-box {
     padding: 113px 0 128px; }
-    main:before {
-      height: 139px; }
+  .main-slider:before {
+    height: 139px; }
+  main .slick-dots {
+    bottom: 76px; }
   .slick-dots li {
     width: 13px;
     height: 13px;
@@ -2058,7 +2104,7 @@ footer {
     font-size: 24px; }
   .product-gallery-item {
     height: auto; }
-  .product-gallery-item.h-100 {
+  .product-gallery-item.h-100, .product-gallery-item.h-auto {
     height: auto; } }
 
 @media only screen and (max-width: 480px) {
@@ -2089,37 +2135,15 @@ footer {
   .input-text {
     font-size: 18px; }
   .main-slider {
-    position: relative;
-    padding: 70px 0 44px; }
+    position: relative; }
     .main-slider:before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      width: calc(100% + 30px);
-      height: 100%;
-      background: url("../img/bg1.jpeg") no-repeat center;
-        background-size: cover; }
-    .main-slider:after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      background: url("../img/decor1.png") no-repeat center bottom;
-        background-size: 100%;
-      height: 66px;
-      width: calc(100% + 30px); }
+      height: 66px; }
     .main-slider .form-booking {
       display: none; }
     .main-slider .slick-dots {
-      margin: 42px auto 0; }
-  main {
-    background: transparent;
-    padding: 0; }
+      bottom: 44px; }
+  .main-slider-box {
+    padding: 70px 0 90px; }
   .slick-dots li {
     width: 7px;
     height: 7px;

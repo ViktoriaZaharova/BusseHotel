@@ -9,7 +9,7 @@
 
     .menu
       li
-        margin: 0 75px 0 0
+        margin: 0 65px 0 0
 
   .menu
     font-size: 12px
@@ -169,15 +169,12 @@
     justify-content: center
     font-size: 22px
 
-  main .slick-dots
-    margin: 30px auto 0
-
   .slick-dots li
     width: 15px
     height: 15px
     margin: 0 15px 0 0
 
-  main:before
+  .main-slider:before
     height: 161px
 
   .form-booking
@@ -211,7 +208,7 @@
   .menu
     font-size: 12px
     li
-      margin: 0 50px 0 0
+      margin: 0 40px 0 0
 
   .logo-icon
     width: 70px
@@ -301,11 +298,15 @@
     width: 265px
     height: 265px
 
-  main:before
+  .main-slider:before
     height: 107px
 
   main
-    padding: 98px 0 120px
+    .slick-dots
+      bottom: 80px
+
+  .main-slider-box
+    padding: 98px 0 114px
 
   .btn
     height: 50px
@@ -321,7 +322,7 @@
   .menu
     font-size: 11px
     li
-      margin: 0 60px 0 0
+      margin: 0 30px 0 0
 
   .logo
     font-size: 16px
@@ -374,7 +375,7 @@
     margin: 0 30px 0 0
 
   .menu li
-    margin: 0 20px 0 0
+    margin: 0 10px 0 0
 
 @media only screen and (max-width: 768px)
   footer
@@ -561,10 +562,16 @@
     h4
       margin: 0 auto 32px
 
-  main
+  .main-slider-box
     padding: 113px 0 128px
+
+  .main-slider
     &:before
       height: 139px
+
+  main
+    .slick-dots
+      bottom: 76px
 
   .slick-dots
     li
@@ -927,7 +934,7 @@
   .product-gallery-item
     height: auto
 
-  .product-gallery-item.h-100
+  .product-gallery-item.h-100, .product-gallery-item.h-auto
     height: auto
 
 @media only screen and (max-width: 480px)
@@ -968,35 +975,16 @@
 
   .main-slider
     position: relative
-    padding: 70px 0 44px
     &:before
-      content: ''
-      position: absolute
-      left: 50%
-      top: 0
-      transform: translate(-50%,0)
-      width: calc(100% + 30px)
-      height: 100%
-      background: url("../img/bg1.jpeg") no-repeat center
-        size: cover
-    &:after
-      content: ''
-      position: absolute
-      left: 50%
-      bottom: 0
-      transform: translate(-50%,0)
-      background: url('../img/decor1.png') no-repeat center bottom
-        size: 100%
       height: 66px
-      width: calc(100% + 30px)
     .form-booking
       display: none
     .slick-dots
-      margin: 42px auto 0
+      bottom: 44px
 
-  main
-    background: transparent
-    padding: 0
+  .main-slider-box
+    padding: 70px 0 90px
+
 
   .slick-dots
     li
