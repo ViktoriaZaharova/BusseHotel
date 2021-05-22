@@ -512,6 +512,8 @@ p, .box-text {
   font-weight: bold;
   color: #000;
   text-transform: uppercase; }
+  .lang-item:hover {
+    color: #CE262B; }
 
 .lang-icon {
   width: 33px;
