@@ -51,3 +51,28 @@ $(window).on('load resize', function() {
     }
 });
 // slick active
+
+// отправка заявки с формы обратной связи на почту
+$(document).ready(function () {
+
+    $(".form").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+
+            $('.thanks-box').fadeIn();
+
+            setTimeout(function () {
+                $(".thanks-box").fadeOut()
+            }, 1000);
+
+            $(".form").trigger("reset");
+        });
+        return false;
+    });
+
+});
+// end

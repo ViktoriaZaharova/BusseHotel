@@ -836,6 +836,10 @@ main {
 .interesting h4 {
   margin: 0 auto 20px; }
 
+.weather-box {
+  border-radius: 10px;
+  overflow: hidden; }
+
 .interesting-wrapper {
   position: relative;
   width: 100%;
@@ -1094,7 +1098,7 @@ footer {
 
 .btn-close {
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 11px;
   width: 27px;
   height: 23px;
@@ -1115,7 +1119,7 @@ footer {
             transform: rotate(-45deg); }
 
 .mobile-menu-wrapper {
-  max-width: 433px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto; }
 
@@ -1141,6 +1145,7 @@ footer {
       color: rgba(206, 38, 43, 0.6); }
 
 .thanks-box {
+  display: none;
   border: 1px solid #CE262B;
     border-radius: 20px;
   text-align: center;
@@ -2107,7 +2112,12 @@ footer {
   .product-gallery-item {
     height: auto; }
   .product-gallery-item.h-100, .product-gallery-item.h-auto {
-    height: auto; } }
+    height: auto; }
+  .mobile-menu-wrapper {
+    max-width: none;
+    padding: 0 30px; }
+  .mobile-menu .menu {
+    font-size: 12px; } }
 
 @media only screen and (max-width: 480px) {
   .weather-box {
@@ -2180,11 +2190,11 @@ footer {
     height: 10px;
     margin: 0; }
   .mobile-menu {
-    padding: 20px 5px; }
+    padding: 35px 5px; }
     .mobile-menu .menu {
-      font-size: 12px; }
+      font-size: 9px; }
       .mobile-menu .menu .dropdown-menu {
-        font-size: 10px; }
+        font-size: 8px; }
   .form-search {
     max-width: 255px;
     margin: 0 auto 25px; }
@@ -2194,8 +2204,15 @@ footer {
   .btn-close {
     width: 22px;
     height: 20px;
-    top: 28px;
+    top: 10px;
     right: 14px; }
+  .mobile-menu-wrapper {
+    padding: 0; }
+  .dropdown-toggle:after {
+    width: 8px;
+    height: 8px; }
+  .dropdown-toggle {
+    padding: 0 10px 0 0; }
   .thanks-box {
     padding: 60px 10px; }
     .thanks-box p {
@@ -2216,7 +2233,5 @@ footer {
     right: 0; }
   .form-wrapper {
     padding: 15px 20px; }
-  .mobile-menu .menu {
-    font-size: 11px; }
   .form-search {
     max-width: 220px; } }
